@@ -1,0 +1,100 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  overflow-x: hidden;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  color: #444444;
+  font-family: "Microsoft YaHei",Helvetica , Arial, Microsoft YaHei, Tahoma, "宋体", Verdana, Georgia;
+}
+textarea {
+  resize: none;
+}
+input,button {
+  outline: 0;
+  &:focus {
+    outline: 0;
+  }
+}
+ul,ol{
+  padding: 0;
+  margin: 0;
+  li {
+    list-style: none;
+  }
+}
+a {
+  display: inline-block;
+  color: inherit;
+  text-decoration: none;
+  &:hover {
+    color:inherit;
+    text-decoration: none;
+  }
+  &:focus {
+    @extend a:hover;
+    outline: none;
+  }
+}
+
+.wrap1200 {
+  width: 1200px;
+  margin: 0 auto;
+  /*@media (max-width: 1200px) {
+    width: 970px;
+  }
+  @media (max-width: 992px) {
+    width: 750px;
+  }
+  @media (max-width: 768px) {
+    width: 95%;
+  }*/
+}
+
+.block {
+  display: block !important;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+
+/*
+.clearfix:after{
+  content:"";//设置内容为空
+  height:0;//高度为0
+  line-height:0;//行高为0
+  display:block;//将文本转为块级元素
+  visibility:hidden;//将元素隐藏
+  clear:both;//清除浮动
+}
+.clearfix{
+  zoom:1; //为了兼容IE
+}*/
+
+.wrap1200 {
+  width: 1200px;
+  min-width: 1200px;
+  margin: 0 auto;
+}
+
+.cover {
+  display: block;
+  background: no-repeat center;
+  background-size: cover;
+  &:before {
+    content: '';
+    display: block;
+    padding-top: 100%;
+  }
+}
+.omit {
+  max-width: 100%;
+  white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+}

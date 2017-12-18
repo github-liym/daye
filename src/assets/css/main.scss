@@ -1,0 +1,126 @@
+@import "base";
+@function px($px) {
+  @return $px * (1200/2340) *1px;
+  /*@return $px * (1920/2880) *1px;*/
+}
+
+body {
+  color: #000;
+  min-width: 1200px;
+  padding-bottom: 50px;
+}
+
+.daye-logo {
+  width: px(217);
+  background-image: url("../images/common/logo_orange.jpg");
+  &:before {
+	padding-top: (156/217)*100%;
+  }
+}
+#header {
+  position: fixed;
+  top: 0;
+  z-index: 99;
+  font-weight: bold;
+  display: inline-block;
+  background: #fff;
+  .daye-logo {
+	display: inline-block;
+	vertical-align: middle;
+  }
+  .nav-main {
+	display: inline-block;
+	font-size: 0;
+	vertical-align: middle;
+	padding: 0 px(28.5) 0 px(75/2);
+	li {
+	  font-size: px(26);
+	  display: inline-block;
+	  padding: 0 px(75/2);
+	}
+  }
+}
+.container-index {
+  .btn-giant {
+	display: block;
+	margin: px(65) auto 0;
+  }
+}
+.carousel-indicators {
+  li {
+	width: 10px;
+	height: 10px;
+	border: 2px solid #fff;
+	border-radius: 50%;
+  }
+  .active {
+	width: 10px;
+	height: 10px;
+	margin: 1px;
+	background-color: #fff;
+  }
+}
+
+.page-header__default {
+  margin: 0;
+  padding: 0;
+  border: none;
+  color: #666666;
+  h1 {
+	float: left;
+	margin: 0;
+	font-size: px(36);
+	>small {
+	  font-size: px(24);
+	  color: rgba(#666666,.6);
+	}
+  }
+  ul {
+	float: right;
+	font-size: px(24);
+	li {
+	  display: inline-block;
+	  padding: 0 px(45);
+	  border-left: 1px solid #d1d1d1;
+	  &:first-child {
+		border-left: none;
+	  }
+	}
+  }
+  small {
+	margin-left: px(40);
+  }
+}
+
+.button {
+  display: inline-block;
+  line-height: 1;
+  font-size: px(30);
+  padding: px(20) px(40);
+  &.is-plain {
+	border: 1px solid #eeeeee;
+	color: #a0a0a0;
+	text-align: center;
+  }
+  /* 巨型按钮 */
+  &.btn-giant {
+	width: px(400);
+	font-size: px(30);
+	padding: px(30) px(40);
+  }
+  &.btn-medium {
+	font-size: px(24);
+	padding: px(20) px(40);
+  }
+  /* 小型按钮 */
+  &.btn-small {
+	font-size: px(20);
+  }
+  /* 超小按钮 */
+  &.btn-mini {
+	font-size: px(18);
+  }
+}
+
+@import "page/index";
+
