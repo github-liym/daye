@@ -5,16 +5,18 @@ const entry = require('./webpack_config/entry_webpack.js');
 const modules = require('./webpack_config/module_webpack');
 const plugins = require('./webpack_config/plugins_webpack');
 
-if (process.env.type=="build"){
+/*if (process.env.type=="build"){
 	var website = {
-		publicPath: "http://91ant.com/",
+		publicPath: "/",
 	};
 }else {
 	var website = {
 		publicPath: "http://192.168.2.112:1717/"
-		// publicPath: "http://192.168.16.101:1717/",
 	};
-}
+}*/
+var website = {
+	publicPath: "/",
+};
 
 module.exports = {
 	// 开发工具

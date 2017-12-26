@@ -1,0 +1,139 @@
+#header {
+  position: fixed;
+  top: 0;
+  z-index: 8;
+  width: auto;
+  font-weight: bold;
+  display: inline-block;
+  font-size: 0;
+  overflow: hidden;
+  transition: width .4s ease;
+  .daye-logo {
+	position: relative;
+	z-index: 2;
+	display: inline-block;
+	vertical-align: middle;
+  }
+  .nav-wrap {
+	position: absolute;
+	top: 0;
+	left: 110px;
+	transform: translateX(0%);
+	transition: all .4s ease;
+	background: #fff;
+  }
+  .nav-main {
+	display: block;
+	font-size: 0;
+	vertical-align: middle;
+	padding: 0 20px;
+	white-space: nowrap;
+	li {
+	  font-size: 12px;
+	  line-height: 80px;
+	  display: inline-block;
+	}
+	a {
+	  padding: 0 20px;
+	}
+  }
+}
+
+#footer {
+  padding: 80px 0 86px;
+  background: #3e3e3e;
+  color: #fff;
+  .footer-inner {
+
+  }
+  header {
+	margin-bottom: 50px;
+	.title {
+	  margin-right: 10px;
+	  font-size: 24px;
+	  line-height: (30/24);
+	}
+	.title-sub {
+	  font-size: 14px;
+	  color: #bbb;
+	}
+  }
+  .fl {
+	width: 440px;
+	.title {
+	  font-size: 16px;
+	  line-height: (24/16);
+	  margin-bottom: 25px;
+	  font-weight: 100;
+	}
+	.info {
+	  font-size: 13px;
+	  line-height: 28px;
+	  color: #989898;
+	  margin-bottom: px(85);
+	  li {
+		//@extend .omit;
+	  }
+	}
+  }
+  .proposal-form {
+	float: right;
+	width: 420px;
+  }
+  .form-item {
+	margin-bottom: 10px;
+  }
+  .inputtxt {
+	width: 100%;
+	padding: 10px 20px;
+	line-height: 20px;
+	color: #fff;
+	border: none;
+	background: transparent;
+	border-bottom: rgba(255, 255, 255, 0.09) 1px solid;
+  }
+  textarea {
+	height: 120px;
+  }
+  button {
+	display: block;
+	width: 100%;
+	background: #5c5c5c;
+	font-size: 16px;
+	height: 48px;
+	border: none;
+  }
+  .social {
+	font-size: 0px;
+	a {
+	  display: inline-block;
+	  width: 30px;
+	  height: 30px;
+	  line-height: 30px;
+	  font-size: 16px;
+	  margin-right: 20px;
+	  text-align: center;
+	  border-radius: 50%;
+	  color: #B3B3B3;
+	  transition: all 0.6s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+	  &:hover {
+		color: #fff;
+		background: #5c5c5c;
+	  }
+	}
+  }
+}
+
+.news-info {
+  background: #fff;
+}
+
+.footer-concise {
+  //padding: 10px 56px;
+  width: 1200px;
+  line-height: 24px;
+  text-align: left;
+  margin: 0 auto;
+  color: #666;
+  font-size: 13px;
+}

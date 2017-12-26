@@ -1,0 +1,40 @@
+
+.design-education {
+  .design-education__news-wrap {
+	padding-bottom: px(110);
+	margin-bottom: px(270);
+  }
+  .design-education__news {
+	padding-right: px(80);
+	margin-bottom: px(165);
+  }
+}
+
+.desc {
+  text-align: justify;
+  font-size: px(24);
+  line-height: (48/24);
+}
+.design-education__intro {
+  padding-bottom: px(120);
+  >.desc {
+	margin-bottom: px(160);
+	color: rgba(#0f0800,.7);
+	line-height: (60/24);
+	padding: 0 px(100);
+  }
+  .list-plain {
+	.item-wrap {
+	  width: 33.33%;
+	  &:nth-child(2) {
+		width: 66.66%;
+		.cover:before {
+		  padding-top: 50%;
+		}
+		.desc {
+		  padding: 0 px(160);
+		}
+	  }
+	}
+  }
+}

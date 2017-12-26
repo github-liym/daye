@@ -60,12 +60,16 @@ plugins.options = [
 	// 分离css
 	new extractTextPlugin("assets/css/main.css"),
 	// 消除无用css
-	new purifyCssPlugin({
-		paths: glob.sync(path.join(__dirname,'../src/*.html'))
-	}),
+/*	new purifyCssPlugin({
+		paths: glob.sync(path.join(__dirname,'../src/!*.html'))
+	}),*/
 	// 开头注释
 	new webpack.BannerPlugin("lym update of "+new Date(new Date().getTime())),
 	// 拷贝静态资源
+	new copyWebpackPlugin([{
+		from: __dirname+"/../src/assets/lib",
+		to: './assets/lib'
+	}]),
 	// 拷贝临时图片文件
 	new copyWebpackPlugin([{
 		from: __dirname+"/../src/assets/images/temporary",

@@ -1,0 +1,36 @@
+.designCenter {
+  .banner-wrap {
+	padding-bottom: px(60);
+	margin-bottom: px(60);
+  }
+  .banner {
+	background-image: url("../images/temporary/design-center__banner.jpg");
+	&:before {
+	  padding-top: (784/2340)*100%;
+	}
+  }
+  .list1 {
+	.item-wrap {
+	  width: 33.33%;
+	}
+  }
+  .list2 {
+	.item-wrap {
+	  width: 50%;
+	}
+	.title {
+	  margin-bottom: px(60);
+	}
+	.cover {
+	  &:before {
+		padding-top: (776/1171) *100%;
+	  }
+	}
+  }
+  .module-plain {
+	margin-bottom: px(60);
+  }
+  .design-center__case {
+	margin-bottom: px(200);
+  }
+}

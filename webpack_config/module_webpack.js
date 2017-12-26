@@ -81,7 +81,12 @@ modules.rule = [
 		test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,
 		use: [
 			{
-				loader: 'file-loader'
+				loader: 'file-loader',
+
+				options: {
+					outputPath: 'assets/fonts/',
+					name: '[name].[ext]'
+				}
 			}
 		]
 	},
@@ -92,7 +97,9 @@ modules.rule = [
 				loader: 'url-loader',
 				options: {
 					prefix: 'font/',
-					limit: 5000
+					limit: 5000,
+					outputPath: 'assets/fonts/',
+					name: '[name].[ext]'
 				}
 			}
 		]
@@ -104,7 +111,9 @@ modules.rule = [
 				loader: 'url-loader',
 				options: {
 					limit: 10000,
-					mimetype: 'application/octet-stream'
+					mimetype: 'application/octet-stream',
+					outputPath: 'assets/fonts/',
+					name: '[name].[ext]'
 				}
 			}
 		]
@@ -116,7 +125,9 @@ modules.rule = [
 				loader: 'url-loader',
 				options: {
 					limit: 10000,
-					mimetype: 'image/svg+xml'
+					mimetype: 'image/svg+xml',
+					outputPath: 'assets/fonts/',
+					name: '[name].[ext]'
 				}
 			}
 		]

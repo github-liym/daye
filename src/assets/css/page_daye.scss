@@ -1,0 +1,149 @@
+.bg-fff {
+  background: #fff;
+}
+img {
+  max-width: 100%;
+}
+.module-plain {
+  @extend .wrap1200;
+  background: #fff;
+  padding-top: px(80);
+  margin-bottom: px(95);
+  h3.title {
+	text-align: center;
+	font-size: px(48);
+	margin: 0 0 px(55);
+  }
+  .caption {
+	padding: px(50) px(100);
+	text-align: center;
+	color: rgba(#0f0800,.7);
+  }
+}
+.list-plain {
+  .item-wrap {
+	float: left;
+	width: 20%;
+	&:nth-child(2n){
+	  .cover {
+		background-color: #a4a4a4;
+	  }
+	}
+	&:nth-child(2n+1){
+	  .cover {
+		background-color: #c1c1c1;
+	  }
+	}
+  }
+  .title {
+	font-size: px(36);
+	font-weight: bold;
+	margin-bottom: px(25);
+  }
+  .desc {
+	font-size: px(24);
+	color: rgba(#0f0800,.7);
+	text-align: justify;
+	line-height: (48/24);
+	height: px(240);
+	overflow: hidden;
+  }
+}
+.list-concise {
+  .item-wrap {
+	float: left;
+	width: 33.33%;
+	&:nth-child(2n){
+	  .cover {
+		background-color: #a4a4a4;
+	  }
+	}
+	&:nth-child(2n+1){
+	  .cover {
+		background-color: #c1c1c1;
+	  }
+	}
+  }
+  .caption {
+	padding-top: px(40);
+	padding-bottom: px(60);
+  }
+  .title {
+	color: rgba(#000,.7);
+	margin-bottom: px(25);
+	font-size: px(32);
+  }
+  .desc {
+	height: px(80);
+	overflow: hidden;
+	line-height: (40/24);
+	color: rgba(#666666,.6);
+	margin-bottom: px(60);
+  }
+}
+.daye-wrap {
+  background: #f0f0f0;
+  .banner {
+	//margin-bottom: px(40);
+	background-image: url("../images/daye-banner.jpg");
+	&:before {
+	  padding-top: (784/2340)*100%;
+	}
+  }
+  .daye-module1 {
+	padding-bottom: px(50);
+	margin-bottom: px(55);
+  }
+  .daye-history {
+	padding: px(60) 0 0 0;
+	margin-top: px(35);
+	border: 1px solid #b3b3b3;
+	.content {
+	  background-image: url("../images/daye-history.jpg");
+	  &:before {
+		padding-top: (876/2336)*100%;
+	  }
+	}
+  }
+}
+
+.team-list {
+  background: #fff;
+  .item-wrap {
+	width: 33.333%;
+	margin-bottom: px(30);
+	&:nth-child(-n+2){
+	  width: 50%;
+	  .cover {
+		&:before {
+		  padding-top: (776/1171)*100%;
+		}
+	  }
+	}
+  }
+
+  .name {
+	margin-bottom: px(20);
+	font-size: px(36);
+	color: #0f0800;
+	font-weight: bold;
+  }
+  .status {
+	margin-bottom: px(50);
+	font-weight: bold;
+  }
+}
+.company-list {
+  padding-bottom: px(300);
+  margin-bottom: px(125);
+  .name {
+	padding: px(40) px(100);
+	height: px(240);
+	overflow: hidden;
+	text-align: center;
+	color: rgba(#0f0800,.7);
+	font-weight: bold;
+	font-size: px(36);
+	line-height: (60/36);
+  }
+}

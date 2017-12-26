@@ -1,3 +1,6 @@
+.container-index {
+  background: #fff;
+}
 #indexBanner {
   .carousel-control {
 	display: none;
@@ -16,19 +19,19 @@
 	@extend .cover;
   }
   .history {
-	background-image: url(../images/index/index-group1_1.jpg);
+	background-image: url(../images/index-group1_1.jpg);
 	&:before {
 	  padding-top: (133/778)*100%;
 	}
   }
   .teams {
-	background-image: url(../images/index/index-group1_2.jpg);
+	background-image: url(../images/index-group1_2.jpg);
 	&:before {
 	  padding-top: (133/389)*100%;
 	}
   }
   .subsidiary {
-	background-image: url(../images/index/index-group1_3.jpg);
+	background-image: url(../images/index-group1_3.jpg);
 	&:before {
 	  padding-top: (133/389)*100%;
 	}
@@ -50,6 +53,9 @@
 }
 .design-center__index {
   padding: px(220) 0 px(170);
+  .btn-giant {
+	margin: 60px auto 0;
+  }
 }
 .design-center__list {
   margin: px(115) px(-27/2) 0;
@@ -133,6 +139,10 @@
   .btn-giant {
 	margin-top: px(120);
   }
+}
+.design-education__news {
+  width: 1200px;
+  margin: 0 auto;
 }
 .design-education__fl {
   float: left;
@@ -244,46 +254,54 @@
 .count__index {
   color: #666666;
   padding-top: px(118);
-  .list-wrap {
-	font-size: 0;
-	margin-bottom: px(120);
-	li {
-	  position: relative;
-	  display: inline-block;
-	  width: 25%;
-	  text-align: center;
-	  font-size: px(24);
-	  &:first-child {
-		&:before {
-		  display: none;
-		}
-	  }
+  .banner {
+	&:before {
+	  padding-top: (377/1581)*100%;
+	}
+  }
+}
+.count-list__giant {
+  color: #666666;
+  font-size: 0;
+  margin-bottom: px(120);
+  li {
+	position: relative;
+	display: inline-block;
+	width: 25%;
+	text-align: center;
+	font-size: px(24);
+	&:first-child {
 	  &:before {
-		content: '';
-		position: absolute;
-		top: 50%;
-		left: 0;
-		transform: translateY(-50%);
-		width: 1px;
-		height: px(90);
-		background: #eeeeee;
+		display: none;
 	  }
 	}
+	&:before {
+	  content: '';
+	  position: absolute;
+	  top: 50%;
+	  left: 0;
+	  transform: translateY(-50%);
+	  width: 1px;
+	  height: px(90);
+	  background: #eeeeee;
+	}
+  }
+  .count {
+	display: inline-block;
+	position: relative;
   }
   .number {
 	font-size: px(75);
 	font-weight: 100;
   }
   .unit {
+	position: absolute;
+	top: 5px;
+	right: -20px;
 	vertical-align: top;
   }
   .title {
 	color: #999999;
-  }
-  .banner {
-	&:before {
-	  padding-top: (377/1581)*100%;
-	}
   }
 }
 .DAYE-investment__index {
@@ -323,7 +341,7 @@
   }
   .cover {
 	position: relative;
-	background-image: url("../images/temporary/12.jpg");
+	background-image: url("../images/index-brand__planning.jpg");
 	&:before {
 	  padding-top: (615/1566)*100%;
 	}
@@ -335,6 +353,8 @@
   right: px(100);
   width: px(740);
   padding: px(100);
+  background: #fff;
+  box-shadow: 0 6px 15px -1px rgba(#000,.2);
   li {
 
 	border-bottom: 1px solid #e5e5e5;
@@ -342,16 +362,123 @@
   .item {
 	display: block;
 	position: relative;
+	padding: px(43) px(140) px(35) 5px;
+	&:hover {
+	  .button {
+		color: #ac7176;
+	  }
+	}
   }
   .button {
 	position: absolute;
 	right: 0;
+	top: px(30);
+	color: rgba(#000,.6);
   }
   .glyphicon-menu-right {
 	margin-left: px(10);
 	font-size: px(20);
   }
+  .title {
+	font-size: px(32);
+	color: #666666;
+	margin-bottom: px(20);
+  }
+  .desc {
+	color: rgba(#666666,.6);
+  }
 }
 .design-service__index {
-
+  padding: px(150) 0 px(170);
+  background: #f8f8f8;
+  .page-header__default {
+	margin-bottom: px(100);
+  }
+}
+.design-service__list {
+  margin-bottom: px(140);
+  .caption {
+	padding-top: px(40);
+	padding-bottom: px(60);
+  }
+  .title {
+	color: rgba(#000,.7);
+	margin-bottom: px(25);
+	font-size: px(32);
+  }
+  .desc {
+	height: px(80);
+	overflow: hidden;
+	line-height: (40/24);
+	color: rgba(#666666,.6);
+	margin-bottom: px(60);
+  }
+}
+.about-us__index {
+  padding-top: px(230);
+  padding-bottom: px(140);
+  background: url("../images/index-aboutus__bg.jpg") repeat-x center top;
+  .inner {
+	position: relative;
+	padding-right: px(730);
+	padding: px(120) px(730) 0 px(150);
+	height: px(670);
+	text-align: justify;
+	color: #999;
+	background: #fff;
+	box-shadow: 0px 15px 30px rgba(0, 0, 0, .06);
+  }
+  header {
+	margin-bottom: 30px;
+	color: #ddd;
+	span {
+	  display: block;
+	}
+  }
+  .title {
+	color: #ec431a;
+	font-size: 24px;
+	margin-bottom: 5px;
+  }
+  .desc {
+	margin-bottom: px(58);
+	line-height: (26/14);
+  }
+  .right-panel {
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: px(640);
+	height: px(670);
+	background-image: url("../images/index_aboutus.jpg");
+  }
+}
+.customers__index {
+  padding: px(125) 0 px(200);
+  .page-header__default {
+	margin-bottom: px(110);
+  }
+  .item {
+	float: left;
+	width: 20%;
+	margin-bottom: 20px;
+	background: center no-repeat;
+	text-align: center;
+  }
+  .cover {
+	position: relative;
+	border: 1px solid rgba(102, 102, 102,.15);
+	transition: all 0.36s ease;
+	&:hover {
+	  z-index: 2;
+	  box-shadow: 0px 0px 40px  rgba(0, 0, 0, 0.1);
+	}
+	&:before {
+	  padding-top: (210/470)*100%;
+	}
+  }
+  .name {
+	line-height: (36/13);
+	color: #999;
+  }
 }
