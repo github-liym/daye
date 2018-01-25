@@ -2,11 +2,38 @@
 <html lang="zh-CN">
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+	<meta name="renderer" content="webkit">
 	<title>首页</title>
 </head>
 <body>
+<!--<div class="loadingLogo moving">
+	<i class="line line-vertically__top"></i>
+	<i class="line line-vertically__bottom"></i>
+
+	<i class="line line-diagonal__bottom"></i>
+	<i class="line line-diagonal__top"></i>
+
+	<i class="line line-horizontally__left"></i>
+	<i class="line line-horizontally__right"></i>
+
+	<div class="line-circular"></div>
+	<div class="line-logo"></div>
+
+	<div class="bg-orange"></div>
+
+	<div class="bg-fff">
+		<div class="logo-full">
+			<div class="logo-hollow"></div>
+			<div class="logo-y"></div>
+			<div class="arrow"></div>
+			<div class="logo-right cover"></div>
+			<div class="logo-text cover"></div>
+		</div>
+
+	</div>
+</div>-->
 <div class="container-index wrapper">
 	<div class="wrap1200">
 		<header id="header">
@@ -61,8 +88,8 @@
 		<div class="index-group1 clearfix">
 			<a href="javascript:" class="item history col-xs-6">
 				<div class="caption">
-					<div class="lg">历史轨迹</div>
-					<div class="sm">daye history</div>
+					<div class="lg">大业设计集团历史轨迹</div>
+					<div class="sm">daye design group history</div>
 				</div>
 			</a>
 			<a href="javascript:" class="item teams col-xs-3">
@@ -239,44 +266,44 @@
 					</div>
 				</div>
 			</div>
+			<div class="count__index">
+				<ul class="list-wrap count-list__giant">
+					<li>
+						<div class="count">
+							<span class="number">680</span>
+							<span class="unit">+</span>
+						</div>
+						<div class="title">累积课时</div>
+					</li>
+					<li>
+						<div class="count">
+							<span class="number">265</span>
+							<span class="unit">人</span>
+						</div>
+						<div class="title">讲师团队</div>
+					</li>
+					<li>
+						<div class="count">
+							<span class="number">324</span>
+							<span class="unit">+</span>
+						</div>
+						<div class="title">覆盖城市</div>
+					</li>
+					<li>
+						<div class="count">
+							<span class="number">470</span>
+							<span class="unit">亿</span>
+						</div>
+						<div class="title">项目研究成果</div>
+					</li>
+				</ul>
+				<div class="banner cover" style="background-image: url(assets/images/temporary/8.jpg)"></div>
+			</div>
 			<a href="javascript:" class="button is-plain btn-more btn-giant">
 				MORE<i class="fa fa-angle-right" aria-hidden="true"></i>
 			</a>
 		</div>
 
-	</div>
-	<div class="wrap1200 count__index">
-		<ul class="list-wrap count-list__giant">
-			<li>
-				<div class="count">
-					<span class="number">680</span>
-					<span class="unit">+</span>
-				</div>
-				<div class="title">累积课时</div>
-			</li>
-			<li>
-				<div class="count">
-					<span class="number">265</span>
-					<span class="unit">人</span>
-				</div>
-				<div class="title">讲师团队</div>
-			</li>
-			<li>
-				<div class="count">
-					<span class="number">324</span>
-					<span class="unit">+</span>
-				</div>
-				<div class="title">覆盖城市</div>
-			</li>
-			<li>
-				<div class="count">
-					<span class="number">470</span>
-					<span class="unit">亿</span>
-				</div>
-				<div class="title">项目研究成果</div>
-			</li>
-		</ul>
-		<div class="banner cover" style="background-image: url(assets/images/temporary/8.jpg)"></div>
 	</div>
 	<div class="DAYE-investment__index wrap1200">
 		<header class="page-header__default clearfix">
@@ -301,6 +328,10 @@
 						<div class="title omit">LED仿真火焰技术</div>
 						<div class="en omit">LED flame simulation technology</div>
 						<div class="desc">总投800万元，获得全球五十多项专利，其中获得美国两项发明专利，产品成功进入欧盟主流销售渠道及市场，占全球市场份额大30%。</div>
+
+						<a href="javascript:" class="button is-plain btn-more btn-medium">
+							more<i class="fa fa-angle-right" aria-hidden="true"></i>
+						</a>
 					</div>
 				</div>
 			</div>
@@ -311,6 +342,9 @@
 						<div class="title omit">造梦者空气净化机</div>
 						<div class="en omit">Dreamer air cleaner</div>
 						<div class="desc">此产品最近成功和小米合作，并通过小米渠道销售。</div>
+						<a href="javascript:" class="button is-plain btn-more btn-medium">
+							more<i class="fa fa-angle-right" aria-hidden="true"></i>
+						</a>
 					</div>
 				</div>
 			</div>
@@ -519,7 +553,13 @@
 				<div class="social">
 					<a target="_blank" href="http://weibo.com/web"><i class="fa fa-weibo"></i></a>
 					<a target="_blank" href="tencent://message/?uin=40080000&Site=uemo&Menu=yes"><i class="fa fa-qq"></i></a>
-					<a class="" target="_blank" href="templates/upload/1/201508/1438424052624.jpg"><i class="fa fa-weixin"></i></a>
+					<a class="wxcode" href="javascript:"><i class="fa fa-weixin"></i></a>
+				</div>
+				<div class="fixed fixed-code__wx">
+					<div class="fixed-container">
+						<img src="http://resources.jsmo.xin/templates/upload/1/201508/1438424052624.jpg">
+						<p>微信扫一扫</p>
+					</div>
 				</div>
 			</div>
 			<div class="proposal-form">

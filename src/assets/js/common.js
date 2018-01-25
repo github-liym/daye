@@ -6,6 +6,16 @@ $(function () {
 	$('.carousel').carousel();
 	$(window).scroll(function () {
 		header.init("#header","setWidth");
+	});
+
+	$(".wxcode").click(function () {
+		$(".fixed-code__wx").addClass("show");
+	});
+	$(".fixed-code__wx .fixed-container").click(function () {
+		event.stopPropagation();
+	});
+	$(".fixed-code__wx").on("click",function () {
+		$(this).removeClass("show");
 	})
 
 });

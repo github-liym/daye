@@ -40,9 +40,10 @@ body {
 
 .page-header__default {
   margin: 0;
-  padding: 0;
+  padding: 0 0 px(35);
   border: none;
   color: #666666;
+  border-bottom: 1px solid #e6e6e6;
   h1 {
 	float: left;
 	margin: 0;
@@ -76,12 +77,13 @@ body {
   font-size: px(30);
   padding: px(20) px(40);
   &.is-plain {
-	border: 1px solid rgba(#000,0.08);
-	color: #a0a0a0;
+	border: 1px solid #e5e5e5;
+	color: #7a7a7a;
 	text-align: center;
 	.fa-angle-right {
 	  font-size: 1.3em;
-	  vertical-align: -.01em;
+	  vertical-align: -.07em;
+	  //vertical-align: middle;
 	  margin-left: 5px;
 	}
   }
@@ -123,6 +125,41 @@ body {
 @import "page_designCenter";
 @import "page_designEducation";
 @import "page";
+@import "loadingPage";
+
+.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  overflow-y: auto;
+  z-index: 100;
+  display: none;
+  &.show {
+	display: block;
+  }
+  .fixed-container {
+	width: 258px;
+	height: 298px;
+	background: #ffffff;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -129px;
+	margin-top: -149px;
+	img {
+	  max-width: 100%;
+	}
+	p {
+	  padding: 0 20px;
+	  text-align: center;
+	  font-size: 14px;
+	  color: #000;
+	}
+  }
+}
 
 
 

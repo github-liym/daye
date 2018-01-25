@@ -1,5 +1,8 @@
 .container-index {
   background: #fff;
+  .page-header__default {
+	margin-bottom: px(40);
+  }
 }
 #indexBanner {
   .carousel-control {
@@ -58,7 +61,7 @@
   }
 }
 .design-center__list {
-  margin: px(115) px(-27/2) 0;
+  margin: 0 px(-27/2) 0;
   .item-wrap {
 	padding: 0 px(27/2);
   }
@@ -75,9 +78,11 @@
 	  .desc {
 		color: rgba(#fff,.9);
 	  }
-	  .button {
-		color: #fff;
-		visibility: hidden;
+	  .btn-more {
+		color: #ef411c;
+		border: 1px solid #ff0000;
+		background: #fff;
+		//visibility: hidden;
 	  }
 	  hr {
 		border-top: 1px solid #fff;
@@ -90,8 +95,8 @@
 	}
   }
   .caption {
-	padding-top: px(45);
-	padding-bottom: px(100);
+	padding: 20px 0 30px;
+	//padding-bottom: px(100);
 	border: 1px solid #e5e5e5;
 	border-top: 0;
 	background: #fff;
@@ -116,8 +121,16 @@
 	border-top: 1px solid #e5e5e5;
   }
   .btn-more {
-	margin-top: px(35);
+	margin-top: 30px;
 	margin-left: px(40);
+	padding: 7px 20px;
+	font-size: 14px;
+	i {
+	  font-size: 1.1em;
+	}
+	.fa-angle-right {
+	  vertical-align: middle;
+	}
   }
   .btn-giant {
 	.glyphicon {
@@ -132,9 +145,6 @@
 .design-education__index {
   padding: px(160) 0 px(170);
   background: #f8f8f8;
-  .page-header__default {
-	margin-bottom: px(110);
-  }
 
   .btn-giant {
 	margin-top: px(120);
@@ -306,17 +316,15 @@
 }
 .DAYE-investment__index {
   margin-top: px(170);
-  .page-header__default{
-	margin-bottom: px(100);
-  }
   .cover {
 	&:before {
 	  padding-top: (243/764)*100%;
 	}
   }
   .caption {
+	position: relative;
 	height: px(440);
-	padding: px(45) px(105) px(10) px(30);
+	padding: px(45) px(105) px(140) px(30);
 	border: 1px solid #e5e5e5;
 	border-top: 0;
   }
@@ -331,6 +339,19 @@
   .desc {
 	color: rgba(#000,.5);
 	line-height: (48/24);
+  }
+  .btn-more {
+	position: absolute;
+	left: px(30);
+	bottom: px(60);
+	padding: 7px 20px;
+	font-size: 14px;
+	i {
+	  font-size: 1.1em;
+	}
+  }
+  .btn-more {
+	position: absolute;
   }
 }
 .brand-planning__index {
