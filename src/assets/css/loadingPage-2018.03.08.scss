@@ -16,17 +16,10 @@ body {
   z-index: 999;
   width: 100%;
   height: 100%;
-  background: #fff;
+  //background: #f23f00;
+  background: palevioletred;
   cursor: pointer;
   overflow: hidden;
-  .load-line {
-    position: absolute;
-    z-index: 5;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-  }
   .cover {
     background: no-repeat center;
     background-size: cover;
@@ -98,8 +91,8 @@ body {
     left: 50%;
     top: 50%;
     transform: translate(-50%,-50%);
+    //width: 508px;
     width: 520px;
-    max-width: 100%;
     opacity: 0;
     background: no-repeat center;
     background-image: url("../images/loading/circular.png");
@@ -122,6 +115,7 @@ body {
     width: 520px;
     opacity: 0;
     background: no-repeat center;
+    //background-image: url("../images/circular.png");
     background-image: url("../images/loading/logo_line.png");
     background-size: 100% auto;
 
@@ -130,6 +124,25 @@ body {
       content: '';
       display: block;
       padding-top: (270/520)*100%;
+    }
+  }
+
+  .bg-orange {
+    position: absolute;
+    z-index: 5;
+    opacity: 1;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    background: #f23f00;
+    border-radius: 50%;
+    transform: translate(-50%,-50%);
+    margin-top: 58px;
+    margin-left: 17px;
+    &:before {
+      content: '';
+      display: block;
+      padding-top: 100%;
     }
   }
   .bg-fff {
@@ -147,18 +160,18 @@ body {
     z-index: 3;
     top: 50%;
     left: 50%;
+    transform: translate(-50%,-50%);
     width: 535px;
-    max-width: 100%;
     background-size: cover;
-    margin-top: -198px;
-    margin-left: -335px;
+    opacity: 0;
+    margin-top: -60px;
     &:before {
       content: '';
       display: block;
       padding-top: (276/535)*100%;
     }
   }
-  .logo-hollow {
+  .logo-hollow,.logo-y {
     position: absolute;
     top: 0;
     left: 0;
@@ -166,8 +179,30 @@ body {
     height: 100%;
     background: no-repeat center;
     background-size: cover;
+  }
+  .logo-hollow {
     background-image: url("../images/loading/daye.png");
     opacity: 0;
+  }
+  .logo-y {
+    background-image: url("../images/loading/daye_y.png");
+    opacity: 0;
+  }
+  .arrow {
+    position: absolute;
+    z-index: 6;
+    top: 27%;
+    left: 51.4%;
+    //width: 96px;
+    width: (96/535)*100%;
+    transform: scale(1.6);
+    background: url("../images/loading/logo_arrow.png");
+    background-size: cover;
+    &:before {
+      content: '';
+      display: block;
+      padding-top: (438/209)*100%;
+    }
   }
   .logo-right {
     position: absolute;
@@ -188,93 +223,55 @@ body {
       padding-top: (250/690)*100%;
     }
   }
-  .load-logo {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: #a6e1ec;
-  }
-  .logo-arrow {
-    position: absolute;
-    top: 50%;
-    right: 50%;
-    z-index: 4;
-    width: 450%;
-    margin-top: -25px;
-    margin-right: -16px;
-    transform: translate((747/3967)*100%,-(5147/9741)*100%);
-    background: url("../images/loading/logo-arrow.png") no-repeat center;
-    background-size: contain;
-    &:before {
-      content: '';
-      display: block;
-      padding-top: (9741/3967)*100%;
-    }
-  }
 
 
   &.moving {
-    animation: loadingLogo 1.5s linear 7.2s;
+    animation: loadingLogo 6.5s linear;
     animation-fill-mode: forwards;
-    .load-line {
-      animation: load-line 3.1s linear;
-      animation-fill-mode: forwards;
-    }
     .line-vertically__top {
-      //animation: line-vertically__top 2.3s linear;
-      animation: line-vertically__top 2s linear;
-      //animation-fill-mode: forwards;
+      animation: line-vertically__top 2.3s linear;
+      animation-fill-mode: forwards;
     }
     .line-vertically__bottom {
-      animation: line-vertically__bottom 2s linear;
-      //animation-fill-mode: forwards;
+      animation: line-vertically__bottom 2.3s linear;
+      animation-fill-mode: forwards;
     }
     .line-diagonal__top {
-      animation: line-diagonal__top 2s linear;
-      //animation-fill-mode: forwards;
+      animation: line-diagonal__top 2.3s linear;
+      animation-fill-mode: forwards;
     }
     .line-diagonal__bottom {
-      animation: line-diagonal__bottom 2s linear;
-      //animation-fill-mode: forwards;
+      animation: line-diagonal__bottom 2.3s linear;
+      animation-fill-mode: forwards;
     }
     .line-horizontally__left {
-      animation: line-horizontally__left 2s linear;
-      //animation-fill-mode: forwards;
+      animation: line-horizontally__left 1.8s linear .5s;
+      animation-fill-mode: forwards;
     }
     .line-horizontally__right {
-      animation: line-horizontally__right 2s linear;
-      //animation-fill-mode: forwards;
+      animation: line-horizontally__right 1.8s linear .5s;
+      animation-fill-mode: forwards;
     }
     .line-circular {
-      //animation: line-circular 1.4s linear .8s;
-      animation: line-circular 2s linear;
-      //animation-fill-mode: forwards;
+      animation: line-circular 1.4s linear .8s;
+      animation-fill-mode: forwards;
     }
     .line-logo {
-      animation: line-logo 2s linear;
-      //animation-fill-mode: forwards;
+      animation: line-logo 1.2s ease-in 1s;
+      animation-fill-mode: forwards;
+    }
+    .bg-orange {
+      animation: bg-orange .6s linear 2.3s;
+      animation-fill-mode: forwards;
     }
     .logo-full {
-      //animation: logo-full 8.7s linear;
-      //animation-fill-mode: forwards;
-    }
-    .logo-arrow {
-      animation: logo-arrow 6.7s linear 2s;
+      animation: logo-full 2s ease 2.2s;
+      animation-fill-mode: forwards;
     }
     .logo-hollow {
-      animation: logo-hollow 6.7s linear 2s;
-    }
-    .logo-right {
-      animation: logo-right 6.7s linear 2s;
+      animation: logo-hollow 1s ease 2.2s;
       animation-fill-mode: forwards;
     }
-    .logo-text {
-      animation: logo-text 6.7s linear 2s;
-      animation-fill-mode: forwards;
-    }
-   /*
-
-
     .logo-y {
       animation: logo-y 1s ease 2.2s;
       animation-fill-mode: forwards;
@@ -283,10 +280,18 @@ body {
       animation: logo-arrow 1s linear 2.2s;
       animation-fill-mode: forwards;
     }
+    .logo-right {
+      animation: logo-right 2s linear 2.2s;
+      animation-fill-mode: forwards;
+    }
+    .logo-text {
+      animation: logo-text 2.5s linear 2.2s;
+      animation-fill-mode: forwards;
+    }
     .bg-fff {
       animation: bg-fff .3s linear 2s;
       animation-fill-mode: forwards;
-    }*/
+    }
 
   }
   $opacity0: 0;
@@ -294,7 +299,7 @@ body {
     0% {
       opacity: 1;
     }
-    95% {
+    90% {
       opacity: 1;
     }
     99% {
@@ -310,24 +315,8 @@ body {
       opacity: 0;
       width: 0;
       height: 0;
-      display: none;
     }
   }
-
-  //线logo
-  @keyframes load-line {
-    0% {
-      opacity: 1;
-    }
-    96%{
-      opacity: 1;
-    }
-    100% {
-      opacity: 0;
-    }
-  }
-  
-  //竖线-上
   @keyframes line-vertically__top {
     0% {
       height: 0;
@@ -335,13 +324,15 @@ body {
     25%{
       height: (978/1200)*100%;
     }
-    100% {
+    95% {
       opacity: 1;
       height: (978/1200)*100%;
     }
+    100% {
+      opacity: $opacity0;
+      height: (978/1200)*100%;
+    }
   }
-
-  //竖线-下
   @keyframes line-vertically__bottom {
     0% {
       height: 0;
@@ -349,174 +340,255 @@ body {
     25%{
       height: (960/1200)*100%;
     }
-    100% {
+    95% {
       opacity: 1;
       height: (960/1200)*100%;
     }
+    100% {
+      opacity: $opacity0;
+      height: (960/1200)*100%;
+    }
   }
-
-  // 斜线-上
   @keyframes line-diagonal__top {
     0% {
       transform: rotate(28.5deg) translate(43px,-100%);
     }
-    25% {
+    20% {
       transform: rotate(28.5deg) translate(43px,240px);
     }
-    100% {
+    95% {
       opacity: 1;
       transform: rotate(28.5deg) translate(43px,240px);
     }
+    100% {
+      opacity: $opacity0;
+      transform: rotate(28.5deg) translate(43px,240px);
+    }
   }
-  @keyframes line-diagonal__top-m {
-     0% {
-       transform: rotate(28.5deg) translate(18px,-100%);
-     }
-     25% {
-       transform: rotate(28.5deg) translate(18px,123px);
-     }
-     100% {
-       opacity: 1;
-       transform: rotate(28.5deg) translate(18px,123px);
-     }
-   }
-
-  // 斜线-下
   @keyframes line-diagonal__bottom {
     0% {
       transform: rotate(28.5deg) translate(103px,100%);
     }
-    25% {
+    20% {
+      transform: rotate(28.5deg) translate(103px,-220px);
+    }
+    95% {
+      opacity: 1;
       transform: rotate(28.5deg) translate(103px,-220px);
     }
     100% {
-      opacity: 1;
+      opacity: $opacity0;
       transform: rotate(28.5deg) translate(103px,-220px);
+    }
+  }
+  @keyframes line-diagonal__top-m {
+    0% {
+      transform: rotate(28.5deg) translate(18px,-100%);
+    }
+    20% {
+      transform: rotate(28.5deg) translate(18px,123px);
+    }
+    95% {
+      opacity: 1;
+      transform: rotate(28.5deg) translate(18px,123px);
+    }
+    100% {
+      opacity: $opacity0;
+      transform: rotate(28.5deg) translate(18px,123px);
     }
   }
   @keyframes line-diagonal__bottom-m {
     0% {
       transform: rotate(28.5deg) translate(44px,100%);
     }
-    25% {
+    20% {
       transform: rotate(28.5deg) translate(44px,-120px);
     }
-    100% {
+    95% {
       opacity: 1;
       transform: rotate(28.5deg) translate(44px,-120px);
     }
+    100% {
+      opacity: $opacity0;
+      transform: rotate(28.5deg) translate(44px,-120px);
+    }
   }
-
-  // 横线-左
   @keyframes line-horizontally__left {
     0% {
       right: 100%;
     }
-    30% {
-      right: 100%;
-    }
-    40% {
+    20% {
       right: 50%;
     }
-    100% {
+    95% {
       opacity: 1;
       right: 50%;
     }
+    100% {
+      opacity: $opacity0;
+      right: 50%;
+    }
   }
-  // 横线-右
   @keyframes line-horizontally__right {
     0% {
       left: 100%;
     }
-    30% {
-      left: 100%;
-    }
-    40% {
+    20% {
       left: 50%;
     }
-    100% {
+    95% {
       opacity: 1;
       left: 50%;
     }
+    100% {
+      opacity: $opacity0;
+      left: 50%;
+    }
   }
-
-  // logo-基本圈圈
   @keyframes line-circular {
     0% {
       opacity: 0;
     }
-    45% {
-      opacity: 0;
-    }
-    65% {
+    80% {
       opacity: 1;
     }
     100% {
-      opacity: 1;
+      opacity: $opacity0;
     }
   }
-  // logo-线条
   @keyframes line-logo {
     0% {
       opacity: 0;
     }
     70% {
+      opacity: 1;
+    }
+    99% {
+      opacity: 1;
+    }
+    100% {
+      opacity: $opacity0;
+    }
+  }
+  @keyframes bg-orange {
+    0% {
+      opacity: 1;
+    }
+    100% {
       opacity: 0;
+    }
+  }
+  @keyframes logo-full {
+    0% {
+      opacity: 0;
+    }
+    10% {
+      opacity: 1;
+    }
+    60% {
+      margin-left: 0px;
+      //margin-top: 0px;
+    }
+    80% {
+      margin-left: -68px;
+      //margin-top: -60px;
+    }
+    100% {
+      margin-left: -68px;
+      //margin-top: -60px;
+      opacity: 1;
+    }
+  }
+  @keyframes logo-full__m {
+    0% {
+      opacity: 0;
+    }
+    10% {
+      opacity: 1;
+    }
+    60% {
+      margin-left: 0px;
+      //margin-top: 0px;
+    }
+    80% {
+      margin-left: -34px;
+      //margin-top: -30px;
+    }
+    100% {
+      margin-left: -34px;
+      //margin-top: -30px;
+      opacity: 1;
+    }
+  }
+  @keyframes logo-hollow {
+    44.9% {
+      opacity: 0;
+    }
+    45% {
+
+      opacity: .2;
     }
     100% {
       opacity: 1;
     }
   }
+  @keyframes logo-y {
+    44.9% {
+      opacity: 0;
+    }
+    45% {
 
+      opacity: .2;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
   @keyframes logo-arrow {
     0% {
-      width: 450%;
+      opacity: 0;
+      transform: scale(1.8);
     }
-    11.94% {
-      width: 220%;
+    4% {
+      opacity: 1;
+      transform: scale(1.8);
     }
-    23.88% {
-      width: 800px;
+    40% {
+      transform: scale(1);
     }
-    31.34% {
-      width: 600px;
-    }
-    40.29% {
-      width: 460px;
-    }
-    49.25% {
-      width: 280px;
-    }
-    59.7% {
-      width: 180px;
-    }
-    64.17% {
-      width: 90px;
+    80% {
+      transform: scale(1);
     }
     100% {
-      width: 90px;
-      //width: 230px;
+      transform: scale(1);
     }
-
   }
-
-  @keyframes logo-hollow {
-    23.88% {
+  @keyframes logo-hollow_bg {
+    0% {
+      width: 0%;
+      height: 0%;
+    }
+    100% {
+      width: 98%;
+      height: 80%;
+    }
+  }
+  @keyframes bg-fff {
+    0% {
       opacity: 0;
     }
-    64.17% {
-      opacity: 1;
-    }
     100% {
       opacity: 1;
     }
   }
-
   @keyframes logo-right {
-    65.67% {
+    0% {
       opacity: 0;
     }
-    68.65% {
+    80% {
+      opacity: 0;
+    }
+    99% {
       opacity: 1;
     }
     100% {
@@ -524,10 +596,13 @@ body {
     }
   }
   @keyframes logo-text {
-    65.67% {
+    0% {
       opacity: 0;
     }
-    77.6% {
+    90% {
+      opacity: 0;
+    }
+    99% {
       opacity: 1;
     }
     100% {
@@ -586,21 +661,21 @@ body {
       margin-top: -30px;
     }
     .bg-orange {
-      //margin-top: 27px;
+      margin-top: 27px;
       margin-left: 5px;
     }
     &.moving {
       .logo-full {
-        //animation: logo-full__m 8.7s linear;
-        //animation-fill-mode: forwards;
+        animation: logo-full__m 2s ease 2.2s;
+        animation-fill-mode: forwards;
       }
       .line-diagonal__top {
         animation: line-diagonal__top-m 2s linear;
-        //animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
       }
       .line-diagonal__bottom {
         animation: line-diagonal__bottom-m 2s linear;
-        //animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
       }
     }
   }

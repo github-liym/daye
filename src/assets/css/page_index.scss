@@ -315,7 +315,9 @@
   }
 }
 .DAYE-investment__index {
-  margin-top: px(170);
+  padding-top: px(170);
+  padding-bottom: px(150);
+  background: #f8f8f8;
   .cover {
 	&:before {
 	  padding-top: (243/764)*100%;
@@ -411,7 +413,7 @@
 }
 .design-service__index {
   padding: px(150) 0 px(170);
-  background: #f8f8f8;
+  //background: #f8f8f8;
   .page-header__default {
 	margin-bottom: px(100);
   }
