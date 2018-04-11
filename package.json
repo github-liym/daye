@@ -45,6 +45,7 @@
   "dependencies": {
     "bootstrap": "^3.3.7",
     "jquery": "^3.2.1",
+    "swiper": "^4.1.6",
     "vue": "^2.5.9"
   },
   "homepage": "https://github.com/muiLee-lym/daye#readme"

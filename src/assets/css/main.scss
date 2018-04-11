@@ -1,4 +1,5 @@
 @import "base";
+@import "../lib/swiper/swiper.min.css";
 @function px($px) {
   @return $px * (1200/2340) *1px;
   /*@return $px * (1920/2880) *1px;*/
